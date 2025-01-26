@@ -124,7 +124,3 @@ if (isNewArchitectureEnabled()) {
     codegenJavaPackageName = "com.wenkesj.voice"
   }
 }
-
-tasks.named('generateCodegenArtifactsFromSchema') {
-    dependsOn(':react-native-voice_voice:generateCodegenSchemaFromJavaScript')
-}

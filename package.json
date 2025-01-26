@@ -7,7 +7,6 @@
   "homepage": "https://github.com/react-native-voice/voice",
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.2.0",
-    "@react-native/codegen": "^0.76.2",
     "@semantic-release/git": "^10.0.1",
     "@tsconfig/node10": "^1.0.11",
     "@types/invariant": "^2.2.37",
