@@ -115,6 +115,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation "com.android.support:appcompat-v7:${supportVersion}"
 }
 
 if (isNewArchitectureEnabled()) {
@@ -123,10 +124,4 @@ if (isNewArchitectureEnabled()) {
     libraryName = "Voice"
     codegenJavaPackageName = "com.wenkesj.voice"
   }
-}
-
-tasks.named('generateCodegenArtifactsFromSchema') {
-    dependsOn tasks.named('generateCodegenSchemaFromJavaScript')
-    inputs.file(file("${buildDir}/generated/source/codegen/schema.json"))
-    outputs.dir(file("${buildDir}/generated/codegen/artifacts"))
 }
