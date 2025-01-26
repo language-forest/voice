@@ -124,3 +124,9 @@ if (isNewArchitectureEnabled()) {
     codegenJavaPackageName = "com.wenkesj.voice"
   }
 }
+
+tasks.named('generateCodegenArtifactsFromSchema') {
+    dependsOn tasks.named('generateCodegenSchemaFromJavaScript')
+    inputs.file(file("${buildDir}/generated/source/codegen/schema.json"))
+    outputs.dir(file("${buildDir}/generated/codegen/artifacts"))
+}
